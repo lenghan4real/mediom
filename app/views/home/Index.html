@@ -1,0 +1,16 @@
+{{set . "title" "Home"}}
+{{template "header.html" .}}
+
+<div class="panel">
+    <div class="panel-heading">
+        Welcome
+    </div>
+    <div class="panel-body">
+      {{setting "index_welcome"}}
+    </div>
+</div>
+
+{{template "partials/node-list.html" .}}
+
+
+{{template "footer.html" .}}

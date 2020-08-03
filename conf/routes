@@ -1,0 +1,48 @@
+GET     /				Home.Index
+WS      /msg                      Home.Message
+GET     /search         Home.Search
+
+GET 		/signup 			Accounts.New
+POST   	/signup 			Accounts.Create
+GET 		/signin 			Accounts.Login
+POST		/signin			Accounts.LoginCreate
+POST    /signout         Accounts.Logout
+GET     /account/edit     Accounts.Edit
+POST    /account          Accounts.Update
+GET     /account/password     Accounts.Password
+POST    /account/password/update     Accounts.UpdatePassword
+
+GET     /topics           Topics.Index
+GET     /topics/feed           Topics.Feed
+GET     /topics/node/:node_id      Topics.Index("node")
+GET     /topics/popular           Topics.Index("popular")
+GET     /topics/recent           Topics.Index("recent")
+
+GET     /topics/new       Topics.New
+GET     /topics/:id       Topics.Show
+GET     /topics/:id/edit       Topics.Edit
+POST    /topics/:id       Topics.Update
+POST    /topics           Topics.Create
+POST    /topics/:id/delete       Topics.Delete
+POST    /topics/:id/reply          Replies.Create
+POST    /topics/:id/watch       Topics.Watch
+POST    /topics/:id/unwatch       Topics.UnWatch
+POST    /topics/:id/star       Topics.Star
+POST    /topics/:id/unstar       Topics.UnStar
+POST    /topics/:id/rank         Topics.Rank
+
+GET     /replies/:id/edit          Replies.Edit
+POST    /replies/:id          Replies.Update
+POST    /replies/:id/delete          Replies.Delete
+
+GET     /notifications            Notifications.Index
+POST    /notifications/clear      Notifications.Clear
+
+GET     /captcha                  App.Captcha
+
+GET     /:login             Users.Show
+GET     /:login/topics      Users.Topics
+
+
+
+
